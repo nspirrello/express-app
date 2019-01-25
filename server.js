@@ -49,6 +49,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageName: 'Projects Page',
+        welcomeMessage: 'Welcome o the Projects Page'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to fufill this request'
